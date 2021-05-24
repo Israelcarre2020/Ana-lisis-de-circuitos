@@ -1,4 +1,5 @@
 var correctCards = 0;
+var intentosEmparejamiento = 0;
 
 $(document).ready(function () { 
     init();
@@ -12,9 +13,9 @@ function init() {
     $('#cardSlots').html('');
 
     // Create the pile of shuffled cards
-    var columnaOrigen = ['Incandescente', 'Halógena', 'De descarga', 'LED'];
-    var numbers = [1, 2, 3, 4];
-    numbers.sort(function () { return Math.random() - .5 });
+    var columnaOrigen = ['Campo de medida o rango', 'Alcance', 'Error', 'Precisión', 'Zona muerta'];
+    var numbers = [1, 2, 3, 4, 5];
+    numbers.sort(function () { return Math.random() - .6 });
 
     for (var i = 0; i < numbers.length; i++) {
         $('<p class="btn btn-warning boton-juego" style="width:100%">' + columnaOrigen[numbers[i]-1] + '</p>').data('number', numbers[i]).attr('id', 'cardEmparejamiento' + numbers[i]).appendTo('#cardPile').draggable({
@@ -26,12 +27,18 @@ function init() {
     }
 
     // Create the card slots
-    var words = ['...', '...', '...', '...'];
+    var words = ['...', '...', '...', '...', '...'];
     for (var i = 1; i <= words.length; i++) {
         $('<p class="btn btn-warning" style="width:85%;">' + words[i - 1] + '</p>').data('number', i).appendTo('#cardSlots').droppable({
             accept: '#cardPile p',
             hoverClass: 'hovered',
-            drop: handleCardDrop
+            drop: handleCardDrop, 
+            over: function(event, ui) {
+                ui.draggable.draggable('option','revert',false);
+            },
+            out: function(event, ui) {
+                ui.draggable.draggable('option','revert',true);
+            }
         });
     }
 
@@ -59,11 +66,15 @@ function handleCardDrop(event, ui) {
         ui.draggable.draggable('option', 'revert', false);
         correctCards++; //increment keep track correct cards
     }
+    
+}
 
-    //If all the cards have been placed correctly then
-    //display a message and reset the cards for
-    //another go
-    if (correctCards === 4) {
+
+function validarResultado(){
+
+    var correctCards = $("#cardPile>p.correct").length;
+
+    if (correctCards === 5) {
         Swal.fire({
             title: '¡Buen trabajo!',
             text: 'Has arrastrado correctamente todos los elementos',
@@ -76,6 +87,27 @@ function handleCardDrop(event, ui) {
                 init();
             }
         })
+    } else{
+        intentosEmparejamiento++;
+
+        if(intentosEmparejamiento >= 2){
+            Swal.fire(
+                '¡Lo sentimos!',
+                'Deberías revisar nuevamente el contenido relacionado a esta unidad de aprendizaje.',
+                'warning'
+                
+            )
+            intentosEmparejamiento = 0;
+            $(".emparejamiento_oculto").hide();
+            init();
+            
+        } else {
+            Swal.fire(
+                '¡Lo sentimos!',
+                'Puedes intentarlo de nuevo',
+                'error'
+            )
+        }
     }
 }
 
