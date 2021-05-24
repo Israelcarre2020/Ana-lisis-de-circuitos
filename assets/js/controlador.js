@@ -1383,6 +1383,29 @@ $(document).ready(function () {
     })
 });
 
+$('#nextstep').click(function () {
+console.log("siguiente");
+
+$('#cardBack_3').attr("data-numeroTarjeta", 5);
+
+
+});
+
+
+$('#nextstep2').click(function () {
+    console.log("siguiente");
+    
+    $('#cardBack_3').attr("data-numeroTarjeta", 5);
+    
+    
+    });
+
+function cambiar() {
+
+    $('#cardBack_3').attr("data-numeroTarjeta", 3);
+    
+}
+
 $('.card_animada').click(function () {
     var numeroTarjeta = $(this).attr("data-numeroTarjeta");
 

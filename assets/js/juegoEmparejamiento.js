@@ -107,6 +107,7 @@ function validarResultado(){
                 'Puedes intentarlo de nuevo',
                 'error'
             )
+            init();
         }
     }
 }
