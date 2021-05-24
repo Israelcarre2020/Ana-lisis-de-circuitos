@@ -4602,7 +4602,7 @@
 
     <div class="modal fade" id="modal_historial" tabindex="-1" role="dialog" aria-labelledby="modal_cubo1" aria-hidden="true">
         <div class="modal-dialog modal-lg"  role="document"  >
-            <div class="modal-content" id="m_interruptor"  style="width: 140%; margin-left: -140px;">
+            <div class="modal-content ajusteModal" id="m_interruptor" >
                 <span class="mod-close" data-dismiss="modal" aria-hidden="true">
                     <i class="fas fa-times-circle fa-3x"></i>
                 </span>
@@ -4615,16 +4615,42 @@
 
                         <div class="row">
                           <div class="col-md-4 text-center">
-                              <button style="width: 100%; white-space: break-spaces; font-size: 12px;" class="btn btn-default" type="button" data-toggle="collapse"
-                                  data-target="#collapseTarjeta1" aria-expanded="false" aria-controls="collapseTarjeta1">Estudio por parte de los equipos<h4 class="font-weight-bold text-center">+</h4></button>
-                              <div class="collapse multi-collapse" id="collapseTarjeta1">
-                                  <div class="card card-body justificado">
-                                      <p class="font13 p_black justificado">Es muy importante hacer un análisis completo, por partes, de todo el sistema, clasificarlo por partes al equipo que se está diagnosticando, por ejemplo, un conjunto eléctrico de un automóvil que se clasifica en: sistema de arranque, sistema de carga, sistema de luces y señales </p>
-                                  </div>
+                            <button class="btn btn-primary" style= "background-color: #2c538e;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                              Estudio por parte<br> de los equipos (+)
+                            </button>
+                            <div class="collapse" id="collapseExample">
+                              <div class="card card-body">
+                                Es muy importante hacer un análisis completo, por partes, de todo el sistema, clasificarlo por partes al equipo que se está diagnosticando, por ejemplo, un conjunto eléctrico de un automóvil que se clasifica en: sistema de arranque, sistema de carga, sistema de luces y señales 
                               </div>
+                            </div>
                           </div>
 
                           <div class="col-md-4 text-center">
+                            <button class="btn btn-primary" style= "background-color: #2c538e;" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                              Factura de repuesto (+)
+                            </button>
+                            <div class="collapse" id="collapseExample2">
+                              <div class="card card-body">
+                                En casos de necesitar un historial de los repuestos utilizados para el sistema que falló, es importante tener un listado de estos preferiblemente en un periodo de tiempo extenso, por ejemplo, un periodo de 5 años, ya que con esto se puede hacer una idea de cuál es el tipo de fallo más común del sistema.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-4 text-center">
+                            <button class="btn btn-primary" style= "background-color: #2c538e;" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                              Diarios de incidentes (+)
+                            </button>
+                            <div class="collapse" id="collapseExample3">
+                              <div class="card card-body">
+                                Es necesario tener una bitácora donde se consignen todo tipo de fallos que se han presentado de los diferentes sistemas, esto con el fin de tener una evidencia y poder pasar las incidencias al momento de cambio de turno.
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+                   <!--        <div class="col-md-4 text-center">
                               <button style="width: 100%; white-space: break-spaces; font-size: 12px;" class="btn btn-default" type="button" data-toggle="collapse"
                                   data-target="#collapseTarjeta2" aria-expanded="false" aria-controls="collapseTarjeta2">Factura de repuesto<h4 class="font-weight-bold text-center">+</h4></button>
                               <div class="collapse multi-collapse" id="collapseTarjeta2">
@@ -4643,7 +4669,7 @@
                                   </div>
                               </div>
                           </div>
-                      
+                       -->
                                 
                                 <!-- <div style="height: 700px; clear: both;"></div> -->
                         </div>
