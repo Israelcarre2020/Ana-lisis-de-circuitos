@@ -50,11 +50,13 @@ function controlAudioSlides(numeroSlide) {
             //$('#carouselActividadAprendizaje1').carousel(0);
             break;    
         case 6:
-           
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades1`).addClass("active_actividad");
             break;                                              
         case 7:
             
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades1`).addClass("active_actividad");
             break;                                              
         case 8:
             $(`.menu_actidades`).removeClass("active_actividad");
@@ -69,17 +71,22 @@ function controlAudioSlides(numeroSlide) {
             
             break;            
         case 10:
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades2`).addClass("active_actividad");
             //$("#carouselGeneracionCorriente").carousel(0);
             
             break;            
         case 11:          
-            
+        $(`.menu_actidades`).removeClass("active_actividad");
+        $(`.menu_actidades2`).addClass("active_actividad");
             break;            
         case 12:
-           
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades2`).addClass("active_actividad");
             break;
         case 13:      
-            
+        $(`.menu_actidades`).removeClass("active_actividad");
+        $(`.menu_actidades2`).addClass("active_actividad");
             break;            
         case 14:
             $(`.menu_actidades`).removeClass("active_actividad");
@@ -91,13 +98,17 @@ function controlAudioSlides(numeroSlide) {
             
             break;               
         case 16:
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades3`).addClass("active_actividad");
             
             break;            
         case 17:
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades3`).addClass("active_actividad");
             break;            
         case 18:
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades3`).addClass("active_actividad");
             break;            
         case 19:         
         $(`.menu_actidades`).removeClass("active_actividad");
@@ -108,17 +119,21 @@ function controlAudioSlides(numeroSlide) {
             $(`.menu_actidades4`).addClass("active_actividad");
             break;            
         case 21:
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades4`).addClass("active_actividad")
             break;                         
         case 22:
-        
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades4`).addClass("active_actividad")
             break;                         
         case 23:
             
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades4`).addClass("active_actividad")
             break;                         
         case 24:
-           
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades4`).addClass("active_actividad")
             break;                         
         case 25:         
         $(`.menu_actidades`).removeClass("active_actividad");
@@ -131,10 +146,12 @@ function controlAudioSlides(numeroSlide) {
             break;   
         case 27:
             
-           
+            $(`.menu_actidades`).removeClass("active_actividad");
+        $(`.menu_actidades5`).addClass("active_actividad")
             break; 
         case 28:
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades5`).addClass("active_actividad")
             break;
         case 29:
             $(`.menu_actidades`).removeClass("active_actividad");
@@ -147,17 +164,21 @@ function controlAudioSlides(numeroSlide) {
             
             break;  
         case 31:
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades6`).addClass("active_actividad");
             break;    
         case 32:
-
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades6`).addClass("active_actividad");
             break;    
         case 33:
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades6`).addClass("active_actividad");
             
             break; 
         case 34:
-            
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades6`).addClass("active_actividad");
             break;   
         case 35:
         
