@@ -1402,7 +1402,7 @@ $('#nextstep2').click(function () {
 
 function cambiar() {
 
-    $('#cardBack_3').attr("data-numeroTarjeta", 3);
+    $('#cardBack_3').attr("data-numeroTarjeta", );
     
 }
 
