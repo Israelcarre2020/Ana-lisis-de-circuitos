@@ -2069,6 +2069,37 @@ picture img {
 }
 
 
+/* ---------------------- */
+
+
+.actividadtruefalse4 label{
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.actividadtruefalse4 label > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.actividadtruefalse4 span{
+    color: #fff;
+}
+
+.actividadtruefalse4 img{
+    width: 30px;
+}
+
+.actividadtruefalse4 label:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+
 .mp10{
     margin: 10px !important;
 }

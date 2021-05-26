@@ -1,19 +1,24 @@
 var numSlide = 54;
 var htmljuego = $("#juegofv").html();
 var htmljuego2 = $("#juegofv2").html();
-var htmljuego2 = $("#juegofv3").html();
+var htmljuego3 = $("#juegofv3").html();
+var htmljuego4 = $("#juegofv4").html();
 var intentosJuego = 0;
 var intentosJuego2 = 0;
 var intentosJuego3 = 0;
+var intentosJuego4 = 0;
 
 var arraytruefalse = [false,false,false];
 var arraytruefalse2 = [false,false,false];
 var arraytruefalse3 = [false,false];
+var arraytruefalse4 = [false,false];
+
 
 $(document).ready(function () {
     iniciarJuegofv();
     iniciarJuegofv2();
     iniciarJuegofv3();
+    iniciarJuegofv4();
     $("#sidebar").mCustomScrollbar({
         theme: "minimal"
     });
@@ -683,6 +688,38 @@ $(document).ready(function () {
         });
     }
 
+    function iniciarJuegofv4() {
+    
+        $(".actividadtruefalse4 label").checkbox({
+          checked: "assets/img/cb2-1.png",
+          check: "assets/img/cb2-0.png",
+          onChange: function(i) {
+                switch (i[0].name) {
+                  case "r1":
+                    if (i[0].value==="1") {
+                        arraytruefalse4[0]=true;
+                    } else {
+                        arraytruefalse4[0]=false;
+                    }
+                    break;
+                  case "r2":
+                    if (i[0].value==="0") {
+                        arraytruefalse4[1]=true;
+                    } else {
+                        arraytruefalse4[1]=false;
+                    }
+                    break;
+                  default:
+                    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+                    break;
+                }
+          },
+          onLoad: function(i) {
+            // do something
+          }
+        });
+    }
+
     function iniciarJuegofv2() {
     
         $(".actividadtruefalse2 label").checkbox({
@@ -799,6 +836,34 @@ $(document).ready(function () {
             }
         }  
     });
+
+    
+    $('#validarjuego5').off('click').on('click', function(){
+        if (intentosJuego4 > 1) {
+            Swal.fire(
+                '¡Has superado el número de intentos!',
+                'Revisa los temas de la actividad de aprendizaje y vuelve a intentarlo',
+                'warning'
+            ) 
+        } else {
+            console.log(arraytruefalse4);
+            if (arraytruefalse4.indexOf(false) != -1) {
+                Swal.fire(
+                    '¡Respuesta Invalida!',
+                    'Selecciona unicamente lo correcto',
+                    'error'
+                )  
+                intentosJuego4++;
+            }else{
+                Swal.fire(
+                    '¡Has acertado!',
+                    'Continua con la Siguiente actividad',
+                    'success'
+                )    
+            }
+        }  
+    });
+
 
     $('#validarjuego2').off('click').on('click', function(){
         if (intentosJuego2 > 1) {
