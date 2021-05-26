@@ -1,9 +1,19 @@
 var numSlide = 54;
 var htmljuego = $("#juegofv").html();
+var htmljuego2 = $("#juegofv2").html();
+var htmljuego2 = $("#juegofv3").html();
 var intentosJuego = 0;
+var intentosJuego2 = 0;
+var intentosJuego3 = 0;
+
 var arraytruefalse = [false,false,false];
+var arraytruefalse2 = [false,false,false];
+var arraytruefalse3 = [false,false];
+
 $(document).ready(function () {
     iniciarJuegofv();
+    iniciarJuegofv2();
+    iniciarJuegofv3();
     $("#sidebar").mCustomScrollbar({
         theme: "minimal"
     });
@@ -672,6 +682,150 @@ $(document).ready(function () {
           }
         });
     }
+
+    function iniciarJuegofv2() {
+    
+        $(".actividadtruefalse2 label").checkbox({
+          checked: "assets/img/cb2-1.png",
+          check: "assets/img/cb2-0.png",
+          onChange: function(i) {
+                switch (i[0].name) {
+                    
+                  case "r4":
+                    if (i[0].value==="1") {
+                   
+                        arraytruefalse2[0]=true;
+                    } else {
+                      
+                        arraytruefalse2[0]=false;
+                    }
+                    break;
+                  case "r5":
+                    if (i[0].value==="0") {
+                        
+                        arraytruefalse2[1]=true;
+                    } else {
+                      
+                        arraytruefalse2[1]=false;
+                    }
+                    break;
+                  case "r6":
+                    if (i[0].value==="1") {
+                       
+                        arraytruefalse2[2]=true;
+                    } else {
+                        arraytruefalse2[2]=false;
+                    }
+                    break;
+                  default:
+                    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+                    break;
+                }
+          },
+          onLoad: function(i) {
+            // do something
+          }
+        });
+    }
+
+    function iniciarJuegofv3() {
+    
+        $(".actividadtruefalse3 label").checkbox({
+          checked: "assets/img/cb2-1.png",
+          check: "assets/img/cb2-0.png",
+          onChange: function(i) {
+                switch (i[0].name) {
+                    
+                  case "r7":
+                    if (i[0].value==="1") {
+                   
+                        arraytruefalse3[0]=true;
+                    } else {
+                      
+                        arraytruefalse3[0]=false;
+                    }
+                    break;
+                  case "r8":
+                    if (i[0].value==="0") {
+                        
+                        arraytruefalse3[1]=true;
+                    } else {
+                      
+                        arraytruefalse3[1]=false;
+                    }
+                    break;
+                  case "r9":
+                    if (i[0].value==="1") {
+                       
+                        arraytruefalse3[2]=true;
+                    } else {
+                        arraytruefalse3[2]=false;
+                    }
+                    break;
+                  default:
+                    //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+                    break;
+                }
+          },
+          onLoad: function(i) {
+            // do something
+          }
+        });
+    }
+
+
+    $('#validarjuego4').off('click').on('click', function(){
+        if (intentosJuego3 > 1) {
+            Swal.fire(
+                '¡Has superado el número de intentos!',
+                'Revisa los temas de la actividad de aprendizaje y vuelve a intentarlo',
+                'warning'
+            ) 
+        } else {
+            console.log(arraytruefalse3);
+            if (arraytruefalse3.indexOf(false) != -1) {
+                Swal.fire(
+                    '¡Respuesta Invalida!',
+                    'Selecciona unicamente lo correcto',
+                    'error'
+                )  
+                intentosJuego3++;
+            }else{
+                Swal.fire(
+                    '¡Has acertado!',
+                    'Continua con la Siguiente actividad',
+                    'success'
+                )    
+            }
+        }  
+    });
+
+    $('#validarjuego2').off('click').on('click', function(){
+        if (intentosJuego2 > 1) {
+            Swal.fire(
+                '¡Has superado el número de intentos!',
+                'Revisa los temas de la actividad de aprendizaje y vuelve a intentarlo',
+                'warning'
+            ) 
+        } else {
+            console.log(arraytruefalse2);
+            if (arraytruefalse2.indexOf(false) != -1) {
+                Swal.fire(
+                    '¡Respuesta Invalida!',
+                    'Selecciona unicamente lo correcto',
+                    'error'
+                )  
+                intentosJuego2++;
+            }else{
+                Swal.fire(
+                    '¡Has acertado!',
+                    'Continua con la Siguiente actividad',
+                    'success'
+                )    
+            }
+        }  
+    });
+
 
 
     $('#validarjuego3').off('click').on('click', function(){
