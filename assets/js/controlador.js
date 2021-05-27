@@ -90,8 +90,8 @@ $(document).ready(function () {
                  $('#smartwizard2').smartWizard("goToStep", 25);
             break;
             case "c6":
-                $('#smartwizard').smartWizard("goToStep", 29);
-                $('#smartwizard2').smartWizard("goToStep", 29);
+                $('#smartwizard').smartWizard("goToStep", 30);
+                $('#smartwizard2').smartWizard("goToStep", 30);
             break;
           default:
             //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
@@ -614,14 +614,14 @@ $(document).ready(function () {
                 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
                 $(".controls-slide").hide();
                  break;
-            case 25:
+            case 26:
                 pause_audio();
                 $(".divcontenido").animate({ width: 'hide' }); 
                 $(".menu-actividades").show(1000); 
                 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
                 $(".controls-slide").hide();
                  break;
-            case 29:
+            case 30:
                pause_audio();
                $(".divcontenido").animate({ width: 'hide' }); 
                $(".menu-actividades").show(1000); 

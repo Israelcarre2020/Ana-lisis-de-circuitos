@@ -20,7 +20,7 @@ function controlAudioSlides(numeroSlide) {
 
     switch (numeroSlide) {
         case 1:
-            
+            audioActual = new Audio('assets/voz/sonido1_p1.mp3');
             break;
         case 2:
             $(`#tabsObjetivos>div>.tabs>button`).removeClass("active");
@@ -154,9 +154,9 @@ function controlAudioSlides(numeroSlide) {
             $(`.menu_actidades5`).addClass("active_actividad")
             break;
         case 29:
+     
             $(`.menu_actidades`).removeClass("active_actividad");
-            $(`.menu_actidades6`).addClass("active_actividad");
-            
+            $(`.menu_actidades5`).addClass("active_actividad")
             break; 
         case 30:
            $(`.menu_actidades`).removeClass("active_actividad");
@@ -181,9 +181,30 @@ function controlAudioSlides(numeroSlide) {
             $(`.menu_actidades6`).addClass("active_actividad");
             break;   
         case 35:
-        
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades6`).addClass("active_actividad");
            
             break; 
+            case 36:
+                $(`.menu_actidades`).removeClass("active_actividad");
+                $(`.menu_actidades6`).addClass("active_actividad");
+                break; 
+        case 37:
+            $(`.menu_actidades`).removeClass("active_actividad");
+            $(`.menu_actidades6`).addClass("active_actividad");
+            break;
+            case 38:
+                $(`.menu_actidades`).removeClass("active_actividad");
+                $(`.menu_actidades6`).addClass("active_actividad");
+                break;
+                case 39:
+                    $(`.menu_actidades`).removeClass("active_actividad");
+                    $(`.menu_actidades6`).addClass("active_actividad");
+                    break;
+                    case 40:
+                        $(`.menu_actidades`).removeClass("active_actividad");
+                        $(`.menu_actidades6`).addClass("active_actividad");
+                        break; 
         case 39:
             // $(`.menu_actidades`).removeClass("active_actividad");
             // $(`.menu_actidades5`).addClass("active_actividad");
