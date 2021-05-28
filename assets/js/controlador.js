@@ -614,7 +614,7 @@ $(document).ready(function () {
                 setTimeout(function() { toggleOptions('.selector'); }, 100);//@ sourceURL=pen.js
                 $(".controls-slide").hide();
                  break;
-            case 26:
+            case 25:
                 pause_audio();
                 $(".divcontenido").animate({ width: 'hide' }); 
                 $(".menu-actividades").show(1000); 
