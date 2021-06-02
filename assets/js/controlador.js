@@ -1563,6 +1563,21 @@ $(document).ready(function () {
        el.addEventListener("click", openTabs2);
     });
 
+    
+    $(".tablinks2").click(function(){
+
+        var idTabs = $(this).parent().parent().parent().attr("id");        
+    
+        $(`#${idTabs}>div>.tabs>button`).removeClass("active");
+        $(`#${idTabs}>div>.wrapper_tabcontent>div`).removeClass("active");
+        
+        $(this).addClass("active");
+        $(`#${$(this).attr("data-country")}`).addClass("active");
+    
+        audioTabs($(this).attr("data-country"));
+    });
+    
+
 
     function openTabs(el) {
        var btnTarget = el.currentTarget;
